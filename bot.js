@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "."
+var prefix = "bc."
 
 
 
@@ -10,7 +10,7 @@ var prefix = "."
 
 
   client.on('message', msg => {
-    if(msg.content === 'b!help')
+    if(msg.content === 'bc.help')
     msg.reply('Check Your DM :white_check_mark:')
   });
 
@@ -68,14 +68,14 @@ msg.delete();
 
 
   client.on("message", message => {
-    if (message.content === ".help") {
+    if (message.content === "bc.help") {
      const embed = new Discord.RichEmbed()
          .setColor("#00FF00")
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help|هيلب
              .bc <message>
 With Embed rec with - :pencil: -
-With out Embed rec with - :pencil2: -
+With out Embed rec with - :pencil2: -**
 `)
    message.author.sendEmbed(embed)
 
