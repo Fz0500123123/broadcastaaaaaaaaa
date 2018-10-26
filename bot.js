@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "b!"
+var prefix = "."
 
 
 
@@ -68,15 +68,15 @@ msg.delete();
 
 
   client.on("message", message => {
-    if (message.content === "b!help") {
+    if (message.content === ".help") {
      const embed = new Discord.RichEmbed()
          .setColor("#00FF00")
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help|هيلب
-
-       b!obc | لأرسال برود كاست للكل
-
-       b!bc  |  لأرسال برود كاست للأونلاين`)
+             .bc <message>
+With Embed rec with - :pencil: -
+With out Embed rec with - :pencil2: -
+`)
    message.author.sendEmbed(embed)
 
    }
@@ -87,7 +87,7 @@ msg.delete();
      client.on('message', message => {
     if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('b!adminbc')){
+if (message.content.startsWith('.adminbc')){
 if(!message.author.id === '393478482379800578') return;
 message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
 client.users.forEach(m =>{
